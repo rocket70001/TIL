@@ -1,0 +1,9 @@
+repositories {
+    flatDir {
+        dirs '/Users/a42/Desktop/TIL/04/0405/hello'
+    }
+}
+
+dependencies {
+    implementation name: 'RandomWord'
+}
