@@ -1,0 +1,18 @@
+{
+  "configurations": {
+    "LLDB": {
+      "adapter": "vscode-lldb",
+      "configuration": {
+        "request": "launch",
+        "program": "${workspaceRoot}/a.out",
+        "args": [],
+        "cwd": "${workspaceRoot}",
+        "stopAtEntry": false,
+        "preLaunchTask": "",
+        "osx": {
+          "miDebuggerPath": "/usr/bin/lldb-vscode"
+        }
+      }
+    }
+  }
+}
