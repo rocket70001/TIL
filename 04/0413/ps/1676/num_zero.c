@@ -3,18 +3,17 @@
 long long cnt_zero_from_factorial(int num)
 {
 	if(num == 0)
-		return 1;
-	long long multiple = num;
+		return 0;
 	int sum_zero = 0;
 	while(num != 1)
 	{
-		printf("multiple is -> %lld, num is -> %d\n", multiple, num);
-		multiple *= --num;
-		while(multiple % 10 == 0)
-		{
+		if(num % 125 == 0)
+			sum_zero += 3;
+		else if(num % 25 == 0)
+			sum_zero += 2;
+		else if(num % 5 == 0)
 			sum_zero++;
-			multiple /= 10;
-		}
+		num--;
 	}
 	return sum_zero;
 }
