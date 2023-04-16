@@ -24,7 +24,7 @@ int main()
 	if(i == 0)
 		oct[j++] = two_to_oct(bin[0] - '0', 0, 0);
 	else if(i == 1)
-		oct[j++] = two_to_oct(0, bin[0] - '0', bin[1] - '0');
+		oct[j++] = two_to_oct(bin[1] - '0', bin[0] - '0', 0);
 	
 	for(int i = --j; i >= 0; i--)
 		printf("%d", oct[i]);
