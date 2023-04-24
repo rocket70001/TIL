@@ -1,0 +1,68 @@
+# 0424 프로그래머스 sql(SELECT)
+
+## 12세 이하인 여자 환자 목록 출력하기
+```sql
+SELECT PT_NAME, PT_NO, GEND_CD, AGE, COALESCE(TLNO, 'NONE') AS TLNO
+FROM PATIENT
+WHERE AGE <= 12 AND GEND_CD = 'W'
+ORDER BY AGE DESC, PT_NAME ASC
+```
+COALESCE -> NULL 값을 찾아 반환, 2번째 파라미터로 NULL값 변환
+
+## 흉부외과 또는 일반외과 의사 목록 출력하기
+```sql
+SELECT DR_NAME, DR_ID, MCDP_CD, DATE_FORMAT(HIRE_YMD,'%Y-%m-%d') HIRE_YMD
+FROM DOCTOR
+WHERE MCDP_CD = 'CS' OR MCDP_CD = 'GS'
+ORDER BY HIRE_YMD DESC, DR_NAME ASC
+```
+
+## 평균 일일 대여 요금 구하기
+```sql
+SELECT ROUND(AVG(DAILY_FEE)) AS AVERAGE_FEE
+FROM CAR_RENTAL_COMPANY_CAR
+WHERE CAR_TYPE = 'SUV'
+```
+소수점 첫째 자리 반올림 ROUND(), 만약 소수점 첫째자리까지 반올림하고 싶다면ROUND(AVG(DAILY\_FEE), 1)<br>
+
+## 인기있는 아이스크림
+```sql
+SELECT FLAVOR
+FROM FIRST_HALF
+ORDER BY TOTAL_ORDER DESC, SHIPMENT_ID ASC
+```
+
+## 서울에 위치한 식당 목록 출력하기
+```sql
+SELECT I.REST_ID,
+    I.REST_NAME,
+    I.FOOD_TYPE, 
+    I.FAVORITES, 
+    I.ADDRESS, 
+    ROUND(AVG(R.REVIEW_SCORE), 2) AS SCORE
+FROM REST_INFO AS I
+    INNER JOIN REST_REVIEW AS R
+    ON R.REST_ID = I.REST_ID
+GROUP BY REST_ID
+HAVING I.ADDRESS LIKE '서울%'
+ORDER BY SCORE DESC,
+    I.FAVORITES DESC
+```
+이너조인, 그룹별로 평균 구할 때 그룹바이로 안 나누면 속성 기준으로 전체 평균 구해짐
+
+## 조건에 부합하는 중고거래 댓글 조회하기
+```sql
+SELECT B.TITLE, 
+    B.BOARD_ID,
+    R.REPLY_ID,
+    R.WRITER_ID,
+    R.CONTENTS,
+    DATE_FORMAT(R.CREATED_DATE,'%Y-%m-%d') AS CREATED_DATE
+FROM USED_GOODS_BOARD AS B
+    JOIN USED_GOODS_REPLY AS R
+    ON B.BOARD_ID = R.BOARD_ID
+WHERE B.CREATED_DATE LIKE '2022-10%'
+ORDER BY R.CREATED_DATE ASC,
+    B.TITLE ASC
+```
+
