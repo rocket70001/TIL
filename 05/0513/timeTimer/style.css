@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 15px;
+    font-size: 45px;
+    font-family: 'Source Code Pro', monospace;
+    letter-spacing: 3px;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.clock_background {
+    position: relative;
+    display: flex;
+    width: 60vh;
+    height: 60vh;
+    border-radius: 50%;
+    background: linear-gradient(to top, #696969, #575757);
+    border: 4px inset rgba(#696969 0.4);
+    box-shadow: inset 0 20px 4px -19px rgba(255,255,255,0.4), 0 12px 12px 0 rgba(0,0,0, 0.3);
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+}
+
+/* 시침 설정 이후 활성화되도록 -> 드래그해서 이동하기 */
+/* .clock_background:hover {
+    box-shadow: inset 0 20px 4px -19px rgba(255,255,255,0.1), 0 16px 16px 10px rgba(0,0,0, 0.3); 
+} */
+
+.clock_background .line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 50%;
+    background-color: black;
+    transform-origin: center top;
+}
+
+.clock_background .sec {
+    height: 49.4%; 
+    width: 2px;
+    background-color: black;
+    z-index: 1;
+}
+
+
+.clock_background .min {
+    height: 49.4%;
+    width: 4px;
+    background-color: black;
+    z-index: 1;
+}
+
+.clock_background .innerCircle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40vh;
+    height: 40vh;
+    background: linear-gradient(to top, #696969, #575757);
+    z-index: 2;
+}
+
+/* 색 조정 필요(밝으면 눈 아프고 어두우면 별로) */
+.clock {
+    position: absolute;
+    width: 58.8vh;
+    height: 58.8vh;
+    border-radius: 50%;
+    background: linear-gradient(to top, #b10000, #ad0202);
+    box-shadow: inset 0 20px 4px -19px rgba(#bc0000,0.4), 0 12px 12px 0 rgba(#b60000 0.3);
+    z-index: 1;
+}
+
+.secondHand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.3%;
+    height: 49%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 28%;
+    border: inset 3px rgba(0,0,0,0.8);
+    transform-origin: center top;
+    transform: rotate(180deg);
+    z-index: 2;
+}
+
+.secondHand:hover {
+    color:red;
+}
+
+@keyframes phone {
+    
+}
