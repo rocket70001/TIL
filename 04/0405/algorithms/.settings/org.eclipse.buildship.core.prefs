@@ -1,0 +1,13 @@
+arguments=--init-script /Users/a42/.config/coc/extensions/coc-java-data/1.14.1/config_mac/org.eclipse.osgi/50/0/.cp/gradle/init/init.gradle --init-script /Users/a42/.config/coc/extensions/coc-java-data/1.14.1/config_mac/org.eclipse.osgi/50/0/.cp/gradle/protobuf/init.gradle
+auto.sync=false
+build.scans.enabled=false
+connection.gradle.distribution=GRADLE_DISTRIBUTION(VERSION(7.4.2))
+connection.project.dir=
+eclipse.preferences.version=1
+gradle.user.home=
+java.home=/opt/homebrew/Cellar/openjdk/19.0.2/libexec/openjdk.jdk/Contents/Home
+jvm.arguments=
+offline.mode=false
+override.workspace.settings=true
+show.console.view=true
+show.executions.view=true
