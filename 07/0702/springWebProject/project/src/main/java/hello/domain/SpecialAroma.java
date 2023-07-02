@@ -1,0 +1,6 @@
+package hello.domain;
+
+public enum SpecialAroma {
+    BERRY, CITRUS, NUTTY, RUBBER_LIKE, TOASTY, FLORAL, WOODY, LEATHER,
+    WINEY, ASHY, CHOCOLATE, CARAMEL, SMOKY, SPICY, EARTHY
+}
