@@ -1,0 +1,7 @@
+
+‚
+java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "todoDTOS".(ëéä×ûÿÿÿÿ8ÓâËİ¼1
+Ì
+java:S6548
+"®An Enum-based Singleton implementation was detected. Make sure the use of the Singleton pattern is required and an Enum-based implementation is the right one for the context.(²¨ëü8İâËİ¼1
+G	java:S106"+Replace this use of System.out by a logger.(ªó÷•8ßâËİ¼1
