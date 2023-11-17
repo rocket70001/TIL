@@ -1,0 +1,12 @@
+
+y	java:S116"XRename this field "DATEFORMATTER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß„Èúÿÿÿÿ8ÍÚôå½1
+o
+java:S1989 "SHandle the following exception that could be thrown by "sendRedirect": IOException.(ˆİÙJ8ÑÚôå½1
+o
+java:S1989'"SHandle the following exception that could be thrown by "sendRedirect": IOException.(ˆİÙJ8ÑÚôå½1
+ƒ
+java:S1989,"aHandle the following exceptions that could be thrown by "forward": ServletException, IOException.(ëĞè×şÿÿÿÿ8ÑÚôå½1
+u
+java:S1989="SHandle the following exception that could be thrown by "sendRedirect": IOException.(°òà›úÿÿÿÿ8ÔÚôå½1
+u
+java:S2226"XRemove this misleading mutable servlet instance field or make it "static" and/or "final"(‹Ú¤ª8ÔÚôå½1

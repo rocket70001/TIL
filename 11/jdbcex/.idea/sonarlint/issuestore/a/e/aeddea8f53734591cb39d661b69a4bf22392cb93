@@ -1,7 +1,7 @@
 
 |
-java:S1488&"_Immediately return this expression instead of assigning it to the temporary variable "dtoList".(ÕüÜ¦8¶š¿½1
+java:S1488&"_Immediately return this expression instead of assigning it to the temporary variable "dtoList".(ÕüÜ¦8‚—€Â½1
 {
-java:S14880"_Immediately return this expression instead of assigning it to the temporary variable "todoDTO".(¬²Èo8ïŞ¿½1
+java:S14880"_Immediately return this expression instead of assigning it to the temporary variable "todoDTO".(¬²Èo8‚—€Â½1
 Ì
-java:S6548"®An Enum-based Singleton implementation was detected. Make sure the use of the Singleton pattern is required and an Enum-based implementation is the right one for the context.(²¨ëü8¸š¿½1
+java:S6548"®An Enum-based Singleton implementation was detected. Make sure the use of the Singleton pattern is required and an Enum-based implementation is the right one for the context.(²¨ëü8†—€Â½1

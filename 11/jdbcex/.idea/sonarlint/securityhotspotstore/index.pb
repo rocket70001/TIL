@@ -39,3 +39,9 @@ r
 Bsrc/main/java/org/zerock/jdbcex/controller/TodoReadController.java,6/c/6ca48b5699bb4cd51509c25d0c86f456dde67b19
 U
 %src/main/webapp/WEB-INF/todo/list.jsp,e/a/ea326e176de711c5a1fba8b0c96faaaa57ede7ca
+t
+Dsrc/main/java/org/zerock/jdbcex/controller/TodoModifyController.java,2/3/236a1212a19a97bd1b0f6949725213216be54fd0
+W
+'src/main/webapp/WEB-INF/todo/modify.jsp,7/0/70d2faf9a49395089e644277838d244c510ca499
+t
+Dsrc/main/java/org/zerock/jdbcex/controller/TodoRemoveController.java,5/8/58eaff2b214baf6b2048bb3b7bd5cbab438a16bc

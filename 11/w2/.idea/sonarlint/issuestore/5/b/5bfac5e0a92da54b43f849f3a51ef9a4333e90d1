@@ -1,0 +1,9 @@
+
+~
+java:S1488"aImmediately return this expression instead of assigning it to the temporary variable "memberDTO".(§ì’8‹Ô¿Ö½1
+~
+java:S1488%"aImmediately return this expression instead of assigning it to the temporary variable "memberDTO".(§ì’8âš³ä½1
+Ñ
+java:S6548"®An Enum-based Singleton implementation was detected. Make sure the use of the Singleton pattern is required and an Enum-based implementation is the right one for the context.(«È‡ûÿÿÿÿ8“Ö¾Ö½1
+l
+java:S1128"PRemove this unused import 'com.sun.org.apache.bcel.internal.generic.INSTANCEOF'.(…¶…8ì©Ñæ½1

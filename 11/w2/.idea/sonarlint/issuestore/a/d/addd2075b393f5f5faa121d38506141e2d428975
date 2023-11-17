@@ -1,0 +1,6 @@
+
+g	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(«®éûÿÿÿÿ8áŠëæ½1
+c
+java:S1192"GDefine a constant instead of duplicating this literal "/login" 3 times.(ˆİÙJ8áŠëæ½1
+\
+java:S24418"?Make "MemberDTO" serializable or don't store it in the session.(ÚûØã8êŠëæ½1
