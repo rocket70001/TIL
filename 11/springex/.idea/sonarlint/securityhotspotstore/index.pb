@@ -19,3 +19,11 @@ k
 ;src/main/java/org/zerock/springex/sample/SampleDAOImpl.java,f/0/f01bca52c58639a32a868e1674662b0571876c22
 i
 9src/test/java/org/zerock/springex/sample/SampleTests.java,d/b/db244c93aaaa868bd96621b1d8c845dab2378749
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+h
+8src/main/java/org/zerock/springex/mapper/TimeMapper.java,a/0/a07ff73d598818848d2c0f7e2be66f8c022b1d6b
+m
+=src/test/java/org/zerock/springex/mapper/TimeMapperTests.java,5/0/5085c9ac98ecb9c1239c382efb90d48341cecd33
+i
+9src/main/java/org/zerock/springex/mapper/TimeMapper2.java,7/6/767cbd8d06ac3b1050f57ad0dd63608f80c41850
