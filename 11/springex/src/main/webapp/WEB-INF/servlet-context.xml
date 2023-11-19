@@ -4,7 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <mvc:annotation-driven></mvc:annotation-driven>
+    <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
 
     <mvc:resources mapping="/resources/**" location="/resources/"></mvc:resources>
 
@@ -15,4 +15,12 @@
 
     <context:component-scan base-package="org.zerock.springex.controller"/>
 
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <set>
+                <bean class="org.zerock.springex.controller.formmater.LocalDateFormatter"/>
+                <bean class="org.zerock.springex.controller.formmater.CheckboxFormatter"/>
+            </set>
+        </property>
+    </bean>
 </beans>

@@ -51,6 +51,12 @@ dependencies {
     implementation 'org.mariadb.jdbc:mariadb-java-client:3.0.4'
     implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.1'
 
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.0.0'
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.2.1.Final'
+
+    //Validate 관련
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.2.1.Final'
+
 }
 
 test {
