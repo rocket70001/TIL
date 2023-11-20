@@ -18,8 +18,8 @@
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
         <property name="formatters">
             <set>
-                <bean class="org.zerock.springex.controller.formmater.LocalDateFormatter"/>
-                <bean class="org.zerock.springex.controller.formmater.CheckboxFormatter"/>
+                <bean class="org.zerock.springex.controller.formatter.LocalDateFormatter"/>
+                <bean class="org.zerock.springex.controller.formatter.CheckboxFormatter"/>
             </set>
         </property>
     </bean>
