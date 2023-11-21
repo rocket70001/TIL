@@ -9,6 +9,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.zerock.springex.domain.TodoVO;
 import org.zerock.springex.dto.PageRequestDTO;
 
+import java.awt.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -59,5 +60,22 @@ public class TodoMapperTests {
 
         List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
         voList.forEach(vo -> log.info(vo));
+    }
+
+    @Test
+    public void testSelectSearch() {
+        PageRequestDTO pageRequestDTO = PageRequestDTO.builder()
+                .page(1)
+                .size(10)
+                .types(new String[]{"t", "w"})
+                .keyword("스프링")
+//                .finished(true)
+                .from(LocalDate.of(2023,11,01))
+                .to(LocalDate.of(2023,12,31))
+                .build();
+
+        List<TodoVO> voList = todoMapper.selectList(pageRequestDTO);
+        voList.forEach(vo -> log.info(vo));
+        log.info(todoMapper.getCount(pageRequestDTO));
     }
 }

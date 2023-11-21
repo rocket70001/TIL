@@ -63,7 +63,6 @@
   <div class="row content">
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <div class="input-group mb-3">
             <span class="input-group-text">TNO</span>
@@ -105,11 +104,11 @@
 
   <script>
     document.querySelector(".btn-primary").addEventListener("click", function (e){
-      self.location = "/todo/modify?tno=" + ${dto.tno}
+      self.location = `/todo/modify?tno=${dto.tno}&${pageRequestDTO.link}`
     }, false)
 
     document.querySelector(".btn-secondary").addEventListener("click", function (e){
-      self.location = "/todo/list"
+      self.location = "/todo/list?${pageRequestDTO.link}"
     }, false)
   </script>
 </div>

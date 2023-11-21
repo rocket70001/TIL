@@ -63,9 +63,11 @@
   <div class="row content">
     <div class="col">
       <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
-          <form action="/todo/modify" method="post">
+          <form id="todoForm" action="/todo/modify" method="post">
+<%--            수정 후 검색 필터링 조건 유지하려면 hidden 활성화(수정되어 조건과 일치하지 않는 튜플이 리스트에 있을 수 있음)--%>
+<%--            <input type="hidden" name="page" value="${pageRequestDTO.page}">--%>
+<%--            <input type="hidden" name="size" value="${pageRequestDTO.size}">--%>
           <div class="input-group mb-3">
             <span class="input-group-text">TNO</span>
             <input type="text" name="tno" class="form-control"
@@ -102,52 +104,45 @@
           </div>
           </form>
           <script>
-            const formObj = document.querySelector("form")
+            const serverValidResult = {}
+            <c:forEach items="${errors}" var="error">
+            serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
+            </c:forEach>
+            console.log(serverValidResult)
+          </script>
+        </div>
+          <script>
+            const formObj = document.getElementById("todoForm")
 
-            document.querySelector(".btn-danger").addEventListener("click", function (e){
+            document.querySelector(".btn-danger").addEventListener("click", function (e) {
               e.preventDefault();
               e.stopPropagation();
-
-              // Create a new hidden input for tno
-              var hiddenInput = document.createElement("input");
-              hiddenInput.type = "hidden";
-              hiddenInput.name = "tno";
-              hiddenInput.value = ${dto.tno}; // Ensure this is the correct way to get the tno value
-
-              // Append the hidden input to the form
-              formObj.appendChild(hiddenInput);
 
               formObj.action = "/todo/remove";
               formObj.method = "post";
               formObj.submit();
-            }, false)
+            }, false);
 
             document.querySelector(".btn-primary").addEventListener("click", function (e) {
-              self.location = "/todo/modify?tno=" + ${dto.tno}
               e.preventDefault();
               e.stopPropagation();
 
+              self.location = `/todo/modify?tno=" + ${dto.tno}&${pageRequestDTO.link}`
               formObj.action ="/todo/modify"
               formObj.method ="post"
-
               formObj.submit()
             }, false)
 
             document.querySelector(".btn-secondary").addEventListener("click", function (e){
-              self.location = "/todo/list"
+              e.preventDefault()
+              e.stopPropagation()
+
+              self.location = `/todo/list?${pageRequestDTO.link}`
             }, false)
           </script>
       </div>
     </div>
   </div>
   </div>
-  <script>
-    const serverValidResult = {}
-    <c:forEach items="${errors}" var="error">
-    serverValidResult['${error.getField()}'] = '${error.defaultMessage}'
-    </c:forEach>
-    console.log(serverValidResult)
-  </script>
-</div>
 </body>
 </html>
