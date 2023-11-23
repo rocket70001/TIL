@@ -6,22 +6,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Data
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BoardDTO {
+@Builder
+public class ReplyDTO {
+
+    private Long rno;
+    @NotNull
     private Long bno;
     @NotEmpty
-    @Size(min = 3, max = 100)
-    private String title;
+    private String replyText;
     @NotEmpty
-    private String content;
-    @NotEmpty
-    private String writer;
-    private LocalDateTime regDate;
-    private LocalDateTime modDate;
+    private String replyer;
+    private LocalDateTime regDate, modDate;
 }
