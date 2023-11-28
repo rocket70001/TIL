@@ -66,6 +66,7 @@ public class BoardController {
     }
 
     @GetMapping({"/read", "/modify"})
+    @PreAuthorize("isAuthenticated()")
     public void read(Long bno, PageRequestDTO pageRequestDTO, Model model) {
         BoardDTO boardDTO = boardService.readOne(bno);
         log.info(boardDTO);
@@ -73,6 +74,7 @@ public class BoardController {
     }
 
     @PostMapping("/modify")
+    @PreAuthorize("principal.username == #boardDTO.writer")
     public String modify(PageRequestDTO pageRequestDTO,
                          @Valid BoardDTO boardDTO,
                          BindingResult bindingResult,
@@ -96,6 +98,7 @@ public class BoardController {
     }
 
     @PostMapping("/remove")
+    @PreAuthorize("principal.username == #boardDTO.writer")
     public String remove(BoardDTO boardDTO, RedirectAttributes redirectAttributes) {
 
         Long bno = boardDTO.getBno();
