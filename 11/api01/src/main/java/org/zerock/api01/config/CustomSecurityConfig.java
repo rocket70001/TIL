@@ -2,6 +2,7 @@ package org.zerock.api01.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.antlr.v4.runtime.Token;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +19,9 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.zerock.api01.security.APIUserDetailsService;
 import org.zerock.api01.security.filter.APILoginFilter;
+import org.zerock.api01.security.filter.TokenCheckFilter;
+import org.zerock.api01.security.handler.APILoginSuccessHandler;
+import org.zerock.api01.util.JWTUtil;
 
 
 @Log4j2
@@ -28,6 +32,8 @@ import org.zerock.api01.security.filter.APILoginFilter;
 public class CustomSecurityConfig {
 
     private final APIUserDetailsService apiUserDetailsService;
+
+    private final JWTUtil jwtUtil;
     @Bean
     public PasswordEncoder passwordEncoder() {
 
@@ -45,6 +51,9 @@ public class CustomSecurityConfig {
     }
     @Bean
     public SecurityFilterChain filterChain(final HttpSecurity http) throws Exception {
+
+        log.info("-----------------------configure-----------------------");
+
 
         //AuthenticationManager 설정
         AuthenticationManagerBuilder authenticationManagerBuilder =
@@ -65,8 +74,16 @@ public class CustomSecurityConfig {
         APILoginFilter apiLoginFilter = new APILoginFilter("/generateToken");
         apiLoginFilter.setAuthenticationManager(authenticationManager);
 
-        //APILoginFilter의 위치 조정
-        http.addFilterBefore(apiLoginFilter, UsernamePasswordAuthenticationFilter.class);
+        //APILoginSuccessHandler
+        APILoginSuccessHandler successHandler = new APILoginSuccessHandler(jwtUtil);
+        //SuccessHanlder 세팅
+        apiLoginFilter.setAuthenticationSuccessHandler(successHandler);
+
+//        //APILoginFilter의 위치 조정, 토큰체크필터 사용으로 주석 처리
+//        http.addFilterBefore(apiLoginFilter, UsernamePasswordAuthenticationFilter.class);
+
+        //api로 시작하는 모든 경로는 TokenCheckFilter 동작
+        http.addFilterBefore(tokenCheckFilter(jwtUtil), UsernamePasswordAuthenticationFilter.class);
 
         //CSRF 토큰 비활성화
         http.csrf(csrf -> csrf.disable());
@@ -76,4 +93,7 @@ public class CustomSecurityConfig {
         return http.build();
     }
 
+    private TokenCheckFilter tokenCheckFilter(JWTUtil jwtUtil) {
+        return new TokenCheckFilter(jwtUtil);
+    }
 }
