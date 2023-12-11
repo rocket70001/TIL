@@ -19,7 +19,7 @@ struct ContentView: View {
     let head = "Memorize!"
     @State var selectedEmojis = WhatEmojis.sea
     @State var presentEmojis = [""]
-    @State var faceState = Array.init(repeating: true, count: 50)
+    @Binding var faceState: Bool
     
     var cards: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
