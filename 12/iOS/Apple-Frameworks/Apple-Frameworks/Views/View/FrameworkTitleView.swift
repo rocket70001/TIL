@@ -1,37 +1,31 @@
 //
-//  FrameworkGridView.swift
+//  FrameworkTitleView.swift
 //  Apple-Frameworks
 //
-//  Created by go on 12/11/23.
+//  Created by go on 12/12/23.
 //
 
 import SwiftUI
 
-struct FrameworkGridView: View {
-    var body: some View {
-        FrameworkTitleView(name: "App-Clips", imageName: "app-clip")
-    }
-}
-
-#Preview {
-    FrameworkGridView()
-}
-
 struct FrameworkTitleView: View {
     
-    let name: String
-    let imageName: String
+    let framework: Framework
     
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(framework.imageName)
                 .resizable()
                 .frame(width: 80, height: 80)
-            Text(name)
+            Text(framework.name)
                 .font(.title2)
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.6)
         }
+        .padding()
     }
+}
+
+#Preview {
+    FrameworkTitleView(framework: MockData.sampleFramework)
 }
