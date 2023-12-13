@@ -16,7 +16,7 @@ struct FrameworkGridView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: viewModel.columns) {
+                LazyVGrid(columns: viewModel.columns) { 
                     ForEach(MockData.frameworks) { framework in
                         FrameworkTitleView(framework: framework)
                             .onTapGesture {
