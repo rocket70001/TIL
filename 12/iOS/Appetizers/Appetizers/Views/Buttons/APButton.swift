@@ -10,10 +10,8 @@ import SwiftUI
 struct APButton: View {
     
     let title: LocalizedStringKey
+    
     var body: some View {
-        Button {
-            print("tapped")
-        } label: {
             Text(title)
                 .font(.title3)
                 .fontWeight(.semibold)
@@ -21,8 +19,6 @@ struct APButton: View {
                 .foregroundColor(.white)
                 .background(Color.brandP)
                 .cornerRadius(10)
-        }
-        .padding(.bottom, 30)
     }
 }
 

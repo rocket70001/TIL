@@ -16,11 +16,8 @@ struct AppetizerListView: View {
             NavigationView {
                 List(viewModel.appetizers) { appetizer in
                     AppetizerListCell(appetizer: appetizer)
-                 //작성
-//                        .onTapGesture {
-//                            viewModel.selectedAppetizer = appetizer
-//                        }
-                    //강의
+//                        .listRowSeparator(.hidden)
+//                        .listRowSeparatorTint(.brandP)
                         .onTapGesture {
                             viewModel.selectedAppetizer = appetizer
                             viewModel.isShowingDetail = true
@@ -30,6 +27,9 @@ struct AppetizerListView: View {
                 .disabled(viewModel.isShowingDetail)
             }
             .onAppear {
+                viewModel.getAppetizers()
+            }
+            .task {
                 viewModel.getAppetizers()
             }
             .blur(radius: viewModel.isShowingDetail ? 20 : 0)

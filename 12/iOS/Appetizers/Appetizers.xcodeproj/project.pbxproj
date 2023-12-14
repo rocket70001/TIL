@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3169E2C2B291E330043A6F6 /* Appetizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3169E2B2B291E330043A6F6 /* Appetizer.swift */; };
+		B3785A232B2A392E009E71B1 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3785A222B2A392E009E71B1 /* CustomModifiers.swift */; };
 		B3ADCFF82B295F0100D39F81 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADCFF72B295F0100D39F81 /* RemoteImage.swift */; };
 		B3ADD00E2B2969E200D39F81 /* XDissmissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADD00D2B2969E200D39F81 /* XDissmissButton.swift */; };
 		B3ADD0102B296B5E00D39F81 /* AppetizerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADD00F2B296B5E00D39F81 /* AppetizerDetailView.swift */; };
@@ -24,6 +25,7 @@
 		B3EC87EB2B29362100A6BA1D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC87EA2B29362100A6BA1D /* Alert.swift */; };
 		B3EC87ED2B293A5D00A6BA1D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC87EC2B293A5D00A6BA1D /* LoadingView.swift */; };
 		B3EC87EF2B293B4D00A6BA1D /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EC87EE2B293B4D00A6BA1D /* Color+Ext.swift */; };
+		B3EE34852B2A7BC3004A419E /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EE34842B2A7BC3004A419E /* Date+Ext.swift */; };
 		B3FDA1692B28A044007452F4 /* AppetizersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDA1682B28A044007452F4 /* AppetizersApp.swift */; };
 		B3FDA16B2B28A044007452F4 /* AppetizerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FDA16A2B28A044007452F4 /* AppetizerTabView.swift */; };
 		B3FDA16D2B28A045007452F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3FDA16C2B28A045007452F4 /* Assets.xcassets */; };
@@ -35,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		B3169E2B2B291E330043A6F6 /* Appetizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appetizer.swift; sourceTree = "<group>"; };
+		B3785A222B2A392E009E71B1 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		B3ADCFF72B295F0100D39F81 /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		B3ADD00D2B2969E200D39F81 /* XDissmissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDissmissButton.swift; sourceTree = "<group>"; };
 		B3ADD00F2B296B5E00D39F81 /* AppetizerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerDetailView.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		B3EC87EA2B29362100A6BA1D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B3EC87EC2B293A5D00A6BA1D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B3EC87EE2B293B4D00A6BA1D /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		B3EE34842B2A7BC3004A419E /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		B3FDA1652B28A044007452F4 /* Appetizers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appetizers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3FDA1682B28A044007452F4 /* AppetizersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizersApp.swift; sourceTree = "<group>"; };
 		B3FDA16A2B28A044007452F4 /* AppetizerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetizerTabView.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				B3EC87EE2B293B4D00A6BA1D /* Color+Ext.swift */,
 				B3CFE3032B29A0FE003FFBBA /* String+Ext.swift */,
+				B3EE34842B2A7BC3004A419E /* Date+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				B3ADD0062B2963DA00D39F81 /* Image */,
 				B3ADD0052B2963D500D39F81 /* Cells */,
 				B3ADD0042B2963CB00D39F81 /* UIKit Components */,
+				B3785A222B2A392E009E71B1 /* CustomModifiers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				B3CFE3042B29A0FE003FFBBA /* String+Ext.swift in Sources */,
 				B3169E2C2B291E330043A6F6 /* Appetizer.swift in Sources */,
 				B3EC87E72B29275F00A6BA1D /* APError.swift in Sources */,
+				B3EE34852B2A7BC3004A419E /* Date+Ext.swift in Sources */,
 				B3EC87E32B29257000A6BA1D /* AppetizerListCell.swift in Sources */,
 				B3CFE30D2B29C0B8003FFBBA /* Order.swift in Sources */,
 				B3EC87E92B2934A500A6BA1D /* AppetizerListViewModel.swift in Sources */,
@@ -337,6 +344,7 @@
 				B3FDA1692B28A044007452F4 /* AppetizersApp.swift in Sources */,
 				B3CFE3002B298EF8003FFBBA /* APButton.swift in Sources */,
 				B3EC87EB2B29362100A6BA1D /* Alert.swift in Sources */,
+				B3785A232B2A392E009E71B1 /* CustomModifiers.swift in Sources */,
 				B3FDA1772B28A08E007452F4 /* AppetizerListView.swift in Sources */,
 				B3FDA17B2B28A0AA007452F4 /* AccountView.swift in Sources */,
 			);
@@ -397,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -454,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
