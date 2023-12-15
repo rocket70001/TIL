@@ -25,7 +25,7 @@ final class AccountViewModel: ObservableObject {
         }
     }
     
-    func retrieveUesr() {
+    func retrieveUser() {
         guard let userData else { return }
         
         do {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B341E3FA2B2C2B22007E4AD1 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341E3F92B2C2B22007E4AD1 /* CardButton.swift */; };
 		B3F526A02B2527E20066AB6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5269F2B2527E20066AB6A /* AppDelegate.swift */; };
 		B3F526A22B2527E20066AB6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F526A12B2527E20066AB6A /* SceneDelegate.swift */; };
 		B3F526A42B2527E20066AB6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F526A32B2527E20066AB6A /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B341E3F92B2C2B22007E4AD1 /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
 		B3F5269C2B2527E20066AB6A /* assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F5269F2B2527E20066AB6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3F526A12B2527E20066AB6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B341E3F82B2C2B09007E4AD1 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B341E3F92B2C2B22007E4AD1 /* CardButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		B3F526932B2527E20066AB6A = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		B3F5269E2B2527E20066AB6A /* assignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				B341E3F82B2C2B09007E4AD1 /* Buttons */,
 				B3F526B32B2528570066AB6A /* ContentView.swift */,
 				B3F5269F2B2527E20066AB6A /* AppDelegate.swift */,
 				B3F526A12B2527E20066AB6A /* SceneDelegate.swift */,
@@ -145,6 +156,7 @@
 				B3F526A02B2527E20066AB6A /* AppDelegate.swift in Sources */,
 				B3F526B42B2528570066AB6A /* ContentView.swift in Sources */,
 				B3F526A22B2527E20066AB6A /* SceneDelegate.swift in Sources */,
+				B341E3FA2B2C2B22007E4AD1 /* CardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

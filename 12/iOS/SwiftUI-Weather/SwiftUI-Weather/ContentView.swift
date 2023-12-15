@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //뷰는 계속해서 생성되고 폐기되지만 @State는 데이터는 유지된다.
+    //뷰는 계속해서 생성되고 폐기되지만 @State의 데이터는 유지된다.
     //ContentView가 자식 뷰인 BackgroundView에서 바인딩된 isNight을 가져온다.
     @State private var isNight = false
     

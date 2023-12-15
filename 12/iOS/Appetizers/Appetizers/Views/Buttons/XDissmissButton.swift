@@ -13,6 +13,7 @@ struct XDissmissButton: View {
             Circle()
                 .frame(width: 30, height: 30)
                 .foregroundColor(.white)
+//                .foregroundColor(.green)
                 .opacity(0.6)
             
             Image(systemName: "xmark")

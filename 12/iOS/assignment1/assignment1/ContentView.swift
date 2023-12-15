@@ -8,100 +8,111 @@
 import SwiftUI
 
 
-enum WhatEmojis: String {
-    case sea,xmas,face
+enum EmojiName: String {
+    case sea = "Sea"
+    case xmas = "Christmas"
+    case face = "Face"
 }
 
 struct ContentView: View {
     let seaEmojis = ["🐢", "🐠", "🐡", "🐬", "🦭", "🦀", "🦈", "🐙", "🪼", "🐟", "🐳"]
-    let xmasEmojis = ["⛪", "🎄", "🎅🏻", "🎅🏿", "🤶🏼", "❄️", "🛷", "🧦", "🎁", "🦌", "🔔"]
-    let faceEmojis = ["😆", "😇", "🤩", "🥸", "🤓", "😘", "🫨", "🧐", "😅", "😋", "🥳"  ]
+    let xmasEmojis = ["⛪", "🎄", "🎅🏻", "🎅🏿", "🤶🏼", "❄️", "🛷", "🧦", "🎁", "🦌", "🔔", "🧸"]
+    let faceEmojis = ["😆", "😇", "🤩", "🥸", "🤓", "😘", "🫨", "🧐", "😅", "😋", "🥳", "😮", "😐"]
     let head = "Memorize!"
-    @State var selectedEmojis = WhatEmojis.sea
-    @State var presentEmojis = [""]
-    @Binding var faceState: Bool
-    
-    var cards: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 65))]) {
-            ForEach(0..<presentEmojis.count, id: \.self) { index in
-               CardView(content: presentEmojis[index])
-                    .aspectRatio(2/3, contentMode: .fit)
-                Toggle()
-            }
-        }
-    }
+    @State private var presentEmojis = [""]
+    @State private var name = EmojiName.sea
 
     
     var body: some View {
-        ScrollView {
-            Text(head).font(.largeTitle)
-            if selectedEmojis == .sea {
-                cards.foregroundColor(.cyan)
-            } else if selectedEmojis == .xmas {
-                cards.foregroundColor(.red)
+        ZStack{
+            Color(.whiteSmoke).ignoresSafeArea(.all)
+            ScrollView {
+                Text(head)
+                    .font(.largeTitle)
+                    .fontWeight(.semibold)
+                    .padding()
+                
+                cards
+                
+                HStack {
+                    Button(action: {
+                        presentEmojis = setDeck(seaEmojis)
+                        name = EmojiName.sea
+                    }, label: {
+                        CardButton(style: "water.waves", name: EmojiName.sea)
+                    })
+                    Button(action: {
+                        presentEmojis = setDeck(xmasEmojis)
+                        name = EmojiName.xmas
+                    }, label: {
+                        CardButton(style: "gift", name: EmojiName.xmas)
+                    })
+                    Button(action: {
+                        presentEmojis = setDeck(faceEmojis)
+                        name = EmojiName.face
+                    }, label: {
+                        CardButton(style: "face.smiling", name: EmojiName.face)
+                    })
+                }
             }
-            else {
-                cards.foregroundColor(.yellow)
-            }
-            
-        }
-        .padding()
-        HStack {
-            Button(action: {
-                selectedEmojis = WhatEmojis.sea
-                presentEmojis = seaEmojis
-            }, label: {
-                VStack{
-                    Text("🐬")
-                    Text("Sea")
-                        .padding(10)
-                        .background(Capsule().strokeBorder())
-                }
-            }).padding().foregroundColor(.cyan)
-            Button(action: {
-                selectedEmojis = WhatEmojis.xmas
-                presentEmojis = xmasEmojis
-            }, label: {
-                VStack{
-                    Text("🎄")
-                    Text("Christmas")
-                        .padding(10)
-                        .background(Capsule().strokeBorder())
-                }
-            }).padding().foregroundColor(.red)
-            Button(action: {
-                selectedEmojis = WhatEmojis.face
-                presentEmojis = faceEmojis
-            }, label: {
-                VStack{
-                    Text("🥸")
-                    Text("Face")
-                        .padding(10)
-                        .background(Capsule().strokeBorder())
-                }
-            }).padding().foregroundColor(.orange)
         }
     }
     
-
+    var cards: some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 85))]) {
+            ForEach(presentEmojis.indices, id: \.self) { index in
+                CardView(content: presentEmojis[index], name: $name)
+                    .aspectRatio(2/3, contentMode: .fit)
+            }
+        }
+        .foregroundColor(name == EmojiName.sea ? .cyan : (name == EmojiName.xmas ? .red : .yellow))
+        }
+    
+    func setDeck(_ present: [String]) -> [String] {
+        var arr = present
+        arr += arr
+        arr.shuffle()
+        return arr
+    }
 }
 
-//5. The face up or face down state of the cards does not need to change when the user
-//changes the theme. -> 불변 객체의 속성 상태를 관리해라
+
 struct CardView: View {
     var content: String
-    @State var isFaceUp = true
+    @State private var isFaceUp = false
+    @Binding var name : EmojiName
+    
+    func getImage(name: EmojiName) -> String {
+        switch name {
+        case .sea:
+            return "water.waves"
+        case .xmas:
+            return "gift"
+        case .face:
+            return "face.smiling"
+        
+        }
+    }
     
     var body: some View {
         ZStack {
             let base = RoundedRectangle(cornerRadius: 12)
             Group {
-                base.fill(.white)
+                base
+                    .fill(name == EmojiName.sea ? Color.cyan.gradient : (name == EmojiName.xmas ? Color.green.gradient : Color.yellow.gradient))
                 base.strokeBorder(lineWidth: 2)
-                Text(content).font(.largeTitle)
+                Text(content).font(.system(size: 60))
+                
             }
             .opacity(isFaceUp ? 1 : 0)
             base.fill().opacity(isFaceUp ? 0 : 1)
+            Image(systemName: getImage(name: self.name))
+                .resizable()
+                .frame(alignment: .center)
+                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.cardBack)
+                .opacity(isFaceUp ? 0 : 1)
+            
         }
         .onTapGesture {
             isFaceUp.toggle()
