@@ -7,26 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B341E3FA2B2C2B22007E4AD1 /* CardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B341E3F92B2C2B22007E4AD1 /* CardButton.swift */; };
-		B3F526A02B2527E20066AB6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F5269F2B2527E20066AB6A /* AppDelegate.swift */; };
-		B3F526A22B2527E20066AB6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F526A12B2527E20066AB6A /* SceneDelegate.swift */; };
+		B3087F342B35AB980008620A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3087F332B35AB980008620A /* Game.swift */; };
+		B3087F362B35BE630008620A /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3087F352B35BE630008620A /* EmojiMemoryGame.swift */; };
 		B3F526A42B2527E20066AB6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F526A32B2527E20066AB6A /* ViewController.swift */; };
-		B3F526A72B2527E20066AB6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F526A52B2527E20066AB6A /* Main.storyboard */; };
 		B3F526A92B2527E30066AB6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F526A82B2527E30066AB6A /* Assets.xcassets */; };
-		B3F526AC2B2527E30066AB6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3F526AA2B2527E30066AB6A /* LaunchScreen.storyboard */; };
 		B3F526B42B2528570066AB6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F526B32B2528570066AB6A /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B341E3F92B2C2B22007E4AD1 /* CardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardButton.swift; sourceTree = "<group>"; };
+		B3087F332B35AB980008620A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B3087F352B35BE630008620A /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 		B3F5269C2B2527E20066AB6A /* assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3F5269F2B2527E20066AB6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3F526A12B2527E20066AB6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B3F526A32B2527E20066AB6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B3F526A62B2527E20066AB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3F526A82B2527E30066AB6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B3F526AB2B2527E30066AB6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B3F526AD2B2527E30066AB6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F526B32B2528570066AB6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,7 +37,6 @@
 		B341E3F82B2C2B09007E4AD1 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				B341E3F92B2C2B22007E4AD1 /* CardButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -70,13 +62,10 @@
 			children = (
 				B341E3F82B2C2B09007E4AD1 /* Buttons */,
 				B3F526B32B2528570066AB6A /* ContentView.swift */,
-				B3F5269F2B2527E20066AB6A /* AppDelegate.swift */,
-				B3F526A12B2527E20066AB6A /* SceneDelegate.swift */,
+				B3087F332B35AB980008620A /* Game.swift */,
+				B3087F352B35BE630008620A /* EmojiMemoryGame.swift */,
 				B3F526A32B2527E20066AB6A /* ViewController.swift */,
-				B3F526A52B2527E20066AB6A /* Main.storyboard */,
 				B3F526A82B2527E30066AB6A /* Assets.xcassets */,
-				B3F526AA2B2527E30066AB6A /* LaunchScreen.storyboard */,
-				B3F526AD2B2527E30066AB6A /* Info.plist */,
 			);
 			path = assignment1;
 			sourceTree = "<group>";
@@ -139,9 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F526AC2B2527E30066AB6A /* LaunchScreen.storyboard in Resources */,
 				B3F526A92B2527E30066AB6A /* Assets.xcassets in Resources */,
-				B3F526A72B2527E20066AB6A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,33 +140,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3F526A42B2527E20066AB6A /* ViewController.swift in Sources */,
-				B3F526A02B2527E20066AB6A /* AppDelegate.swift in Sources */,
+				B3087F342B35AB980008620A /* Game.swift in Sources */,
 				B3F526B42B2528570066AB6A /* ContentView.swift in Sources */,
-				B3F526A22B2527E20066AB6A /* SceneDelegate.swift in Sources */,
-				B341E3FA2B2C2B22007E4AD1 /* CardButton.swift in Sources */,
+				B3087F362B35BE630008620A /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B3F526A52B2527E20066AB6A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3F526A62B2527E20066AB6A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B3F526AA2B2527E30066AB6A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B3F526AB2B2527E30066AB6A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B3F526AE2B2527E30066AB6A /* Debug */ = {
